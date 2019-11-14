@@ -1,15 +1,28 @@
 <template>
-  <b-form @submit="onSubmit" inline>
-    <b-form-input
-      id="input-ytlink"
-      class="mb-2 mr-sm-2 mb-sm-0"
-      v-model="form.name"
-      required
-      placeholder="http://www.youtube.com/"
-    ></b-form-input>
-
-    <b-button type="submit" variant="primary">Convert</b-button>
-  </b-form>
+<b-container>
+  <b-row align-h="center">
+    <b-form @submit="onSubmit" inline>
+      <b-form-group
+        id="input-group-ytlink"
+      >
+        <b-row align-h="center">
+          <b-col cols="7">
+            <b-form-input
+              id="input-ytlink"
+              class="mb-2 mr-sm-2 mb-sm-0"
+              v-model="form.name"
+              required
+              placeholder="http://www.youtube.com/"
+            ></b-form-input>
+          </b-col>
+          <b-col cols="2">
+            <b-button type="submit" variant="primary">Convert</b-button>
+          </b-col>
+        </b-row>
+      </b-form-group>
+    </b-form>
+  </b-row>
+</b-container>
 </template>
 
 <script>
