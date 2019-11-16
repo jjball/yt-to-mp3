@@ -1,5 +1,5 @@
 <template>
-<b-container>
+<b-container id="home">
   <b-row align-h="center">
     <b-form @submit="onSubmit" inline>
       <b-form-group
@@ -63,5 +63,9 @@ li {
 }
 a {
   color: #42b983;
+}
+#home {
+  text-align: center;
+  margin-top: 30px;
 }
 </style>
