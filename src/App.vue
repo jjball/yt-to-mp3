@@ -1,9 +1,14 @@
 <template>
   <div id="app">
-    <b-navbar toggleable="lg" type="dark" variant="info">
-      <b-navbar-brand>Youtube To MP3 Converter</b-navbar-brand>
-    </b-navbar>
-    <Home />
+    <div style="min-height:610px;">
+      <b-navbar toggleable="lg" type="dark" variant="info">
+        <b-navbar-brand>Youtube To MP3 Converter</b-navbar-brand>
+      </b-navbar>
+      <Home />
+    </div>
+    <div class="fluid-container footer">
+      <p class="text-center">Copyright</p>
+    </div>
   </div>
 </template>
 
@@ -30,5 +35,8 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 0px;
+}
+.fluid-container.footer {
+  margin-bottom: 0px;
 }
 </style>
