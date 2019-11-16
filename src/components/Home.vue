@@ -1,12 +1,12 @@
 <template>
-<b-container>
+<b-container id="home">
   <b-row align-h="center">
     <b-form @submit="onSubmit" inline>
       <b-form-group
         id="input-group-ytlink"
       >
         <b-row align-h="center">
-          <b-col cols="7">
+          <b-col>
             <b-form-input
               id="input-ytlink"
               class="mb-2 mr-sm-2 mb-sm-0"
@@ -14,8 +14,6 @@
               required
               placeholder="http://www.youtube.com/"
             ></b-form-input>
-          </b-col>
-          <b-col cols="2">
             <b-button type="submit" variant="primary">Convert</b-button>
           </b-col>
         </b-row>
@@ -63,5 +61,12 @@ li {
 }
 a {
   color: #42b983;
+}
+#home {
+  text-align: center;
+  margin-top: 30px;
+}
+#input-ytlink {
+  width: 400px;
 }
 </style>

@@ -1,5 +1,8 @@
 <template>
   <div id="app">
+    <b-navbar toggleable="lg" type="dark" variant="info">
+      <b-navbar-brand>Youtube To MP3 Converter</b-navbar-brand>
+    </b-navbar>
     <Home />
   </div>
 </template>
@@ -26,6 +29,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 0px;
 }
 </style>
