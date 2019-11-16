@@ -10,7 +10,7 @@
             <b-form-input
               id="input-ytlink"
               class="mb-2 mr-sm-2 mb-sm-0"
-              v-model="form.name"
+              v-model="form.ytlink"
               required
               placeholder="http://www.youtube.com/"
             ></b-form-input>
@@ -26,7 +26,8 @@
 </template>
 
 <script>
-// import axios from 'axios';
+import axios from 'axios';
+import { RESTAPIHOST } from '../utility/constants';
 
 export default {
   name: 'Home',
@@ -40,8 +41,8 @@ export default {
   methods: {
     onSubmit(evt) {
     evt.preventDefault();
-      alert(JSON.stringify(this.form));
-      // const resp = axios.post(`/convert?url=${JSON.stringify(form.ytlink)}`);
+      axios.get(`${RESTAPIHOST}/video?url=${JSON.stringify(this.form.ytlink)}`);
+      alert(`Converting video at ${this.form.ytlink}. This could take up to a couple minutes.`);
     },
   },
 }
